@@ -13,6 +13,7 @@ jobs:
     - uses: actions/checkout@v3
       with: 
         repository: 'RuchiDhal/infra-live'
+        token: ${{ secrets.GITHUB_TOKEN }}
     - uses: hashicorp/setup-terraform@v2
     - name: Terraform fmt
       id: fmt
