@@ -17,6 +17,7 @@ jobs:
         ref: 'main'
     - uses: hashicorp/setup-terraform@v2
     - name: Terraform fmt
+      working-directory: ./aws-ecs-cluster
       id: fmt
       run: terraform fmt -check
       continue-on-error: true
